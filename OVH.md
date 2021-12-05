@@ -284,12 +284,6 @@ Une fois le setup terminé, le profil sera disponible dans le dossier /root
 Ensuite il faut setup les règles iptables donc `nano /etc/rc.local`, rajouter une ligne ifconfig avec cette fois-ci la bonne ip.
 Puis copier les règles iptables et remplacer l'ip failover et locale par la nouvelle. Une fois ceci fait n'oubliez pas de mettre les permissions en écriture (`chmod +x /etc/rc.local`) et vous n'avez pas besoin de redémarrer : un simple `bash /etc/rc.local` devrais suffit !
 
-### Infos Pratique
-
-Si vous avez besoin de déployer WireGuard sur des containers LXC suivez [ce tutoriel](http://web.archive.org/web/20210826175543/https://nixvsevil.com/posts/wireguard-in-proxmox-lxc/)
-
-Je rajouterais d'autres infos ici au fur et à mesure des remarques qu'on me fera sur ce tutoriel.
-
 
 
 ### Merci
