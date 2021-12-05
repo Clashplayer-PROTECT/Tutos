@@ -1,13 +1,8 @@
-## Avoir des IP Failover OVH chez soi (grâce à Wireguard)
+## Créaction TUNNEL OVH à la Maison avec IP FAILOVER grâce à WireGuard
 
 ```
-⚠ Une mise à niveau de ce tutoriel est nécessaire pour :
+Ce Fork est réalise avec version de Debian 11 avec quelques changement !
 
-* l'arrivée de Debian 11,
-
-* et Wireguard nativement dans le kernel linux 5.10>
-
-Ces sujets peuvent donc ne pas être complets et je vous conseille de les ignorer tant que cet avertissement persiste. ⚠
 ```
 
 Hey !
@@ -55,53 +50,6 @@ Voici une petite liste des trucs à faire après avoir reçu notre service :
 - Installer nos IP Failover et quelques règles IPTables
 
 - Créons notre tout premier profil WireGuard
-
-
-#### Retirer le Kernel Cloud
-
-Connectez-vous en SSH avec de super clients comme [Termius](https://termius.com/) (désolé la team [MobaXTerm](https://mobaxterm.mobatek.net/)) et commençons.
-
-Vous avez normalement reçu par email les identifiants. Si vous avez choisit debian 10 (**ce qu'il faut choisir hein**) le login est `debian` et le mot de passe auto-généré.
-
-```
-sudo su -
-apt purge linux-image-$(uname -r)
-```
-
-Ici, on retire tout les kernels installés sur notre VPS, si vous redémarrez sans avoir terminé les prochaines commandes, le VPS ne démarrera plus donc évitez :/ C'est d'ailleurs pour cela qu'une **pop-up demande si oui ou non** ne devons annuler. **Il faut répondre NON**.
-On peut juste après installer le dernier kernel tout propre avec les commandes suivantes :
-
-```
-apt update
-apt install linux-image-amd64 linux-headers-amd64
-```
-
-Une fois notre nouveau kernel d'installé, on peut redémarrer notre VPS avec la commande :
-
-```
-reboot
-```
-
-On peut se reconnecter et le mettre à jour :
-
-```
-apt update
-apt full-upgrade
-reboot
-```
-
-Une fois toutes ces commandes terminées, le VPS aura redémarré à la dernière version ! On est fin prêt pour continuer :)
-
-#### Installer WireGuard sur notre VPS
-
-Maintenant que notre kernel est prêt il nous reste plus qu'a utiliser un script déjà tout fait par la communauté de la toile !
-
-Ajoutons d'abord nos repos (pour Debian 10) :
-
-```bash
-sh -c "echo 'deb http://deb.debian.org/debian buster-backports main contrib non-free' > /etc/apt/sources.list.d/buster-backports.list"
-apt update
-```
 
 
 Voici les commandes à exécuter pour tout préparer et lancer notre installation :
