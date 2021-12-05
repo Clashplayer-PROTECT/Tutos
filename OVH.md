@@ -115,11 +115,8 @@ Client's WireGuard IPv4: 10.66.66.2
 
 Ici il nous demande son IP sur le LAN, donc laissez par défaut et tout se passera bien. Mais **notez-le** quand même.
 
-Quand vous avez fini la commande, n'oubliez pas de faire :
 
-`nano /etc/wireguard/wg0.conf`
-
-Modifions le fichier avec la commande :
+Ouvrons-le (`/etc/wireguard/wg0.conf`), vous devriez avoir la même configuration en changeant les arguments
 
 ```bash
 [Interface]
