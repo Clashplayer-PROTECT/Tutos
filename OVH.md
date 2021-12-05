@@ -3,7 +3,7 @@
 
 
 ```
-Ce upgrade de la documentation de MichelBaie en raison que le tutoriel n'est plus du tout à jour.
+Cette mise à jour de la documentation de MichelBaie car le tutoriel n'est plus à jour..
 
 ```
 
